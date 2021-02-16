@@ -137,56 +137,56 @@ define(function () {
             , text: "鞋包"
         }
         , {
-            imgUrl: "./image/home/img%20(5).jpg"
+            imgUrl: "./image/home/img%20(85).jpg"
             , text: "服饰杂货"
         }
         , {
-            imgUrl: "./image/home/img%20(92).jpg"
+            imgUrl: "./image/home/img%20(83).jpg"
             , text: "童装"
         }
         , {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(82).jpg"
             , text: "MUJI LABO"
         }
         , {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(81).jpg"
             , text: "卫生&美容用品"
         }, {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(60).jpg"
             , text: "纺织品"
         }
         , {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(59).jpg"
             , text: "文具"
         }, {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(58).jpg"
             , text: "居家用品"
         }
         , {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(57).jpg"
             , text: "家具"
         }, {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(56).jpg"
             , text: "电子产品"
         }, {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(55).jpg"
             , text: "户外用品"
         }
         , {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(54).jpg"
             , text: "MUJI IDEE"
         }, {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(53).jpg"
             , text: "MUJI BOOKS"
         }, {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(52).jpg"
             , text: "点心"
         }
         , {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(51).jpg"
             , text: "饮料·冷食"
         }, {
-            imgUrl: "./image/home/img%20(84).jpg"
+            imgUrl: "./image/home/img%20(50).jpg"
             , text: "调味加工"
         }
     ]

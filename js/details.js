@@ -180,7 +180,7 @@ define(function(){
                 localStorage.setItem('goods',JSON.stringify(goodArr))
                 alert('加入购物车成功')
             }else{
-                alert('未选择颜色')
+                alert('未选择颜色,或者尺寸')
             }
         })
         

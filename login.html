@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/cssLayout.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+<!--头部加载-->
+<header class="header"></header>
+
+<div class="content-main">
+    <div class="loginNav">
+        <div class="loginNav_show">验证码登录</div>
+        <div>密码登录</div>
+        <div>注册</div>
+    </div>
+    <div class="login">
+        <div class="login_mask">
+            <img class="img" src="" alt="由于接口id每天更换，所以如果没有出现图片请联系我">
+            <p class="close">X</p>
+            <span>请输入验证码</span><input type="text" placeholder="请输入手机短信验证码" class="yz" id="yz">
+            <div class="right">
+                <span class="tips2">验证码错误</span>
+            </div>
+        </div>
+        <div class="phone">
+            <span>手机号</span><input type="tel" placeholder="请输入手机号码" class="ipt">
+            <div class="right">
+                <span class="tips1">该号码不属于国内</span>
+            </div>
+        </div>
+        <div class="verificationCode">
+            <span>验证码</span><input type="text" placeholder="请输入手机短信验证码" class="yz">
+            <button class="sendYz">发送验证码</button>
+            <div class="right">
+                <span class="tips2">验证码错误</span>
+            </div>
+        </div>
+        <div class="button">
+            <button class="go">登录</button>
+            <button class="back">返回</button>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <!--ajax数据渲染-->
+</footer>
+
+<!--模块化加载js-->
+<script src="./js/require.js" data-main="./js/main"></script>
+<script !src="">
+    /* /!*底部footer渲染*!/
+     let $footer = $('.footer')
+     $footer.load('./footer.html')*/
+
+</script>
+</body>
+</html>

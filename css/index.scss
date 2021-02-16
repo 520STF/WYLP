@@ -1,0 +1,356 @@
+// .header{
+//     height: 60px;
+//     position: sticky;
+//     left: 0;top:0;
+//     z-index: 99;
+//     background: white;
+//     border-bottom: 1px solid #eeeeee;
+//     #header{
+        
+//         // left: 50%;
+//         // margin-left: -600px;
+//         overflow: hidden;
+//         .logo img{
+//             width: 145px;height: 60px;float: left;
+//         }
+//         .menu{
+//             float: left;
+//             ul{
+//                 li{
+//                     float: left;padding: 19px 10px 10px;
+//                     margin: 0 15px;
+//                     transition: .3s;
+//                     a{
+//                         color: #000000;
+//                     }
+//                     &:hover{
+//                         border-bottom: 4px solid black;
+//                     }
+//                 }
+//             }
+//         }
+//         .seach{
+//             float: left;
+//             width: 507px;
+//             .wrap{
+//                 float: left;padding: 10px 0;
+//                 .ipt{
+//                     width: 370px;height: 38px;border: 1px solid #eeeeee;
+//                     float: left;text-indent: 1rem;
+//                 }
+//                 img{
+//                     float: left;width: 38px;height: 38px;border: 1px solid #eeeeee;
+//                 }
+//             }
+//             .shopping{
+//                 float: right;box-sizing: border-box;margin-left: 10px;
+//                 padding: 8.5px 0;cursor: pointer;
+//                 img{
+//                     width: 24px;height: 24px;margin: 0 auto;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+#banner{
+    width: 1200px;height: 750px;
+    overflow: hidden;margin-top: 10px;
+    position: relative;
+    .main{
+        // overflow: hidden;
+        width: 1200px;height: 750px;
+    }
+    .content{
+        // overflow: hidden;
+        width: 6000px;position: absolute;
+        img{
+            float: left;
+            width: 1200px;height: 750px;
+        }
+    }
+    .prev{
+        background: url(../image/home/prev.png);width: 45px;height: 79px;
+        position: absolute;top: 50%;left: 44px;margin-left: -22px;opacity: .5;
+        cursor: pointer;
+    }
+    .next{
+        background: url(../image/home/next.png);width: 45px;height: 79px;
+        position: absolute;top: 50%;right: 44px;margin-right: -22px;opacity: .5;
+        cursor: pointer;
+    }
+    .pages{
+        position: absolute;right: 50%;width: 120x;height: 30px;
+        bottom: 20px;overflow: hidden;
+        span{
+            float: left;width: 20px;height: 20px;border-radius: 50%;
+            line-height: 20px;text-align: center;margin: 0 5px;
+            background: #999;cursor: pointer;
+        }
+        .show{
+            background: white;box-shadow: 0px 0px 5px white;
+        }
+    }
+}
+
+#sale{
+    padding: 0 54px;height: 120px;margin : 20px auto 0 auto;
+    background: url(../image/home/sale_prev.png)no-repeat left,url(../image/home/sale_next.png)no-repeat right;
+    // background: pink;
+    box-sizing: border-box;
+    .sale{
+        margin-left: 15px;
+        .item{
+            width: 291px;height: 118px;margin-right: 15px;
+            border: 1px solid #e5e5e5;float: left;
+            .heading{
+                width: 130px;height: 118px;padding: 0 17px;
+                background: #f2f2f2;float: left;
+                text-align: center;
+                .price{
+                    font-size: 24px;margin-top: 30px;
+                }
+                .use{
+                    margin-top: 5px;
+                }
+            }
+            .more{
+                float: left;width: 90px;height: 118px;
+                padding: 0 17px;
+                .imove{
+                    text-align: center;
+                    p{  
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        margin-top: 30px;
+                    }
+                    a{
+                        display: block;padding: 5px 0;color: white;
+                        background: black;margin-top: 5px;
+                        transition: .6s;
+                        &:hover{
+                            background: red;color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#title{
+    .title{
+        overflow: hidden;
+        margin: 18px 0;
+        h1{
+            font-size: 24px;float: left;
+        }
+        a{
+            float: right;color: #60b3fa;font-weight: bold;
+        }
+    }
+}
+
+#list{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    .item{
+        width: 282px;height: 218px;float: left;
+        border: 1px solid #eeeeee;cursor: pointer;
+        // margin-right :16px;
+        .img{
+            position: relative;
+            img{
+                width: 280px;height: 175px;
+            }
+            .text{
+                position: absolute;bottom: 20px;left: 20px;
+                font-size: 20px;color: white;
+            }
+        }
+        .info{
+            padding: 10px 13px;
+            font-size: 14px;
+        }
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*版心*/
+.content-main {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/*新商品 和 产品*/
+.newShop, .goods, .salesRanking, .video {
+    box-sizing: border-box;
+}
+
+.newShop_top, .goods_top,
+.salesRanking_top,
+.video_top {
+    height: 32px;
+    margin: 15px 0;
+}
+
+.newShop_top > h2:first-child,
+.goods_top > h2:first-child,
+.salesRanking_top > h2:first-child,
+.video_top > h2:first-child {
+    font-size: 24px;
+    line-height: 32px;
+    float: left;
+}
+
+.newShop_top > h2:last-child,
+.goods_top > h2:last-child,
+.salesRanking_top > h2:last-child,
+.video_top > h2:last-child {
+    float: right;
+    color: #60b3fa;
+    font-weight: 600;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.newShop_bottom,
+.salesRanking_bottom,
+.video_bottom {
+    overflow: hidden;
+}
+
+.newShop_bottom_box,
+.salesRanking_bottom_box {
+    width: 285px;
+    height: 339px;
+    float: left;
+    margin-right: 20px;
+    padding-bottom: 20px;
+}
+
+.newShop_bottom_box:nth-child(4n),
+.salesRanking_bottom_box:nth-child(4n) {
+    margin-right: 0;
+}
+
+.newShop_bottom_box > div,
+.salesRanking_bottom_box > div {
+    width: 283px;
+    height: 283px;
+    border: 1px solid #F2F2F2;
+}
+
+.newShop_bottom_box > div img,
+.salesRanking_bottom_box > div img {
+    width: 283px;
+    height: 283px;
+}
+
+.newShop_bottom_box > p,
+.salesRanking_bottom_box > p {
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+}
+
+.newShop_bottom_box > span:nth-of-type(1),
+.salesRanking_bottom_box > span:nth-of-type(1) {
+    float: left;
+    color: #7f0019;
+    margin-top: 5px;
+}
+
+.newShop_bottom_box > span:nth-of-type(1) > span,
+.salesRanking_bottom_box > span:nth-of-type(1) > span {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.newShop_bottom_box > span:last-child,
+.salesRanking_bottom_box > span:last-child {
+    float: right;
+    margin-top: 5px;
+    color: #999;
+}
+
+.goods_bottom_box {
+    float: left;
+    width: 282px;
+    height: 72px;
+    margin: 10px 21px 15px 0;
+    border: 1px solid #F2F2F2;
+}
+
+.goods_bottom > .goods_bottom_p1 {
+    margin: 10px 0;
+}
+
+.goods_bottom > .goods_bottom_p2 {
+    margin: 208px 0 10px;
+}
+
+.goods_bottom > .goods_bottom_p3 {
+    margin: 308px 0 10px;
+}
+
+.goods_bottom_box:nth-of-type(4),
+.goods_bottom_box:nth-of-type(10),
+.goods_bottom_box:nth-of-type(14) {
+    margin-right: 0;
+}
+
+.goods_bottom_box div img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 15px;
+}
+
+.goods_bottom_box div > span {
+    font-size: 14px;
+    line-height: 72px;
+    text-indent: 1em;
+    float: left;
+    color: #000;
+}
+
+.video_bottom {
+    margin-bottom: 220px;
+}
+
+.video_bottom > p {
+    margin-bottom: 22px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #585858;
+}
+
+.video_bottom > div {
+    width: 100%;
+    height: 675px;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.video_bottom > div > video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+

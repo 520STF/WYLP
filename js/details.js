@@ -4,7 +4,7 @@ define(function(){
         id = id.slice(1)
         // console.log(id);
         $.ajax({
-            url : '../data/details.json',
+            url : './data/details.json',
             type : 'get',
             success : function(result){
                 // console.log(result);
@@ -16,7 +16,7 @@ define(function(){
                             <div class="img">
                                 <img src="${result[i].url[0]}" alt="" class="detail_img">
                                 <div class="mask"></div>
-                                <img class="details_img" src="./image/shopList/img%20(1).jpg" alt="网络错误，图片未能加载">
+                                <img class="details_img" src="${result[i].url[0]}" alt="网络错误，图片未能加载">
                             </div>
                             <div class="detail_box">
                                 <div class="prev"></div>
@@ -98,10 +98,11 @@ define(function(){
                                 `).appendTo('#details .color ul li')
                             }
 
-                            console.log(result[i].one_img);
+                            // console.log(result[i].one_img);
                             for(var l=0;l<result[i].one_img.length;l++){
                                 $(`<img src=${result[i].one_img[l]} alt="网络错误，图片未加载">`).appendTo('.detail_box_content>div')
                             }
+                            // dataRendering(id)
                             magnifier()
                     }
                         
@@ -113,6 +114,35 @@ define(function(){
         })
         
     }
+
+        /*img_div数据渲染*/
+        function dataRendering(id) {
+            /*数据渲染*/
+            let rendering = $('.detail_box_content>div')
+            let maxImg = $('.details_img')//大图
+            let minImg = $('.detail_img')//小图
+            let str = ""
+            $.get({
+                url: "./data/details.json"
+                ,success: function (arr) {
+                    for (let i = 0, len = arr.length; i < len; i++){
+                        if (arr[i].id === id) {
+                            // console.log(arr[i].url)
+                            minImg.attr('src', arr[i].url[0])
+                            maxImg.attr('src', arr[i].url[0])
+                            for (let n = 0, l = arr[i].url.length; n < l; n++) {
+                                str += `<img src=${arr[i].url[n]} alt="网络错误，图片未加载">`
+                            }
+                            rendering.html(str)
+                        }
+                    }
+                    magnifier()
+                }
+                ,error:function (msg) {
+                    console.log("数据加载失败》》》"+msg)
+                }
+            })
+        }
 
     function shopping(){
 
@@ -312,5 +342,6 @@ define(function(){
     return{
         details :details,
         shopping : shopping,
+        // dataRendering : dataRendering
     }
 })

@@ -1,7 +1,8 @@
-.content-main {
-    width: 1200px;
-    overflow: hidden;
-    margin: 0 auto;
+.box_footer{
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 67px);
+    flex-direction: column;
 }
 
 .loginNav {
@@ -40,12 +41,12 @@
 .login {
     margin: 45px auto;
     width: 421px;
-    padding-bottom: 60px;
     position: relative;
+    display: none;
 }
 
 .login input {
-    padding: 4px 7px;
+    padding: 8px 7px;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
 }
@@ -60,6 +61,12 @@
     margin-bottom: 15px;
 }
 
+.verificationCode .registerImg{
+    width: 107px;
+    height: 34px;
+    float: right;
+}
+
 .phone > span, .verificationCode > span {
     font-size: 14px;
     margin-right: 48px;
@@ -67,26 +74,63 @@
 
 .verificationCode > button {
     width: 107px;
-    padding: 7px 7px;
+    padding: 8px 0;
+    margin-left: 3px;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     color: white;
     background-color: #000;
 }
 
-.ipt {
+.password{
+    margin-left: 14px;
+}
+
+.forgotPassword{
+    font-size: 14px;
+    line-height: 20px;
+    color: #60b3fa;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.forgotPassword>span{
+    cursor: pointer;
+}
+
+.ipt ,#iptPhone,.password,.registerPhone,.newPass,.confirmPass{
     width: 315px;
 }
 
-.yz, #yz {
+.yz, #yz,.registerYZ {
     width: 200px;
 }
-
+.newPassWord,.confirmPassword,.birthday,.sex,.haveRead{
+    padding-bottom: 15px;
+}
+.newPass,.confirmPass,.birthday>input{
+    float: right;
+}
+.newPassWord>span,.confirmPassword>span,.birthday>span{
+    font-size: 14px;
+    line-height: 34px;
+}
+.sex>label:nth-of-type(1){
+    margin-left: 58px;
+}
+.haveRead{
+    cursor: pointer;
+}
 .button {
     display: flex;
     flex-grow: 0;
     flex-flow: row nowrap;
     justify-content: space-around;
+}
+.passwordButton{
+    display: flex;
+    flex-grow: 0;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 .go, .back {
@@ -117,7 +161,7 @@
     margin-top: -24px;
 }
 
-.tips1, .tips2 {
+.tips1, .tips2 ,.tips3 ,.tips4 {
     float: left;
     font-size: 12px;
     color: crimson;
@@ -136,7 +180,7 @@
     display: none;
 }
 
-.login_mask > img {
+.login_mask > .login_img {
     width: 225px;
     height: 80px;
     margin: 0 auto;

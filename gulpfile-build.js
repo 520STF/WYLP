@@ -21,27 +21,26 @@ task('scss',async ()=>{
 
 // 处理js
 task('script',async ()=>{
-    src('./script/*.js')
-    .pipe(load.rev())
-    .pipe(load.babel({
-        presets : ['@babel/env']
-    }))
-    .pipe(load.uglify())
+    src('./js/*.js')
     .pipe(dest('./dist/js'))
-    .pipe(load.rev.minifest())
-    .pipe(dest('./rev/js'))
 })
 
 // 压缩图片
 task('image', async ()=>{
-    src('./image/*.*')
+    src('./image/**/*.*')
+    .pipe(load.imageminChangba())
     .pipe(dest('./dist/image'))
+})
+
+// 处理json
+task('data',async ()=>{
+    src('./data/*.json').pipe(dest('./dist/data'))
 })
 
 // 处理html
 task('html',async ()=>{
-    setTimeout(()=>{
-        src(['./rev/**/*.json','./views/*.html'])
+    await setTimeout(()=>{
+        src(['./rev/**/*.json','./*.html'])
         .pipe(load.revCollector({replaceReved:true}))
         .pipe(load.minifyHtml())
         .pipe(dest('./dist'))
@@ -49,5 +48,5 @@ task('html',async ()=>{
 })
 
 // 打包(生成环境)
-task('build',series('delDist','scss','script','image','html'))
+task('build',series('delDist','scss','script','image','data','html'))
 

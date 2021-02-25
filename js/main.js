@@ -22,6 +22,12 @@ require.config({
 })
 
 require(['banner','list','details','login','shoppingCar'],function(banner,list,details,login,shoppingCar){
+    console.log("__      __ _     __   __    ___  \n" +
+                    "\\ \\    / /| |    \\ \\ / /   | _ \\ \n" +
+                    " \\ \\/\\/ / | |__   \\ V /    |  _/ \n" +
+                    "  \\_/\\_/  |____|  _|_|_   _|_|_  \n" +
+                        "_|\"\"\"\"\"|_|\"\"\"\"\"|_| \"\"\" |_| \"\"\" | \n" +
+                        "\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-' \n")
     banner.banner()
     banner.list()
     banner.data()
@@ -33,8 +39,10 @@ require(['banner','list','details','login','shoppingCar'],function(banner,list,d
 
     details.details()
     details.shopping()
+    // details.dataRendering()
 
     login.verificationCode()
+    login.Login()
 
     shoppingCar.shoppingCar()
 })

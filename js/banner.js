@@ -58,7 +58,7 @@ define(['jquery','dataBase'],function($,arr){
     }
     function list(){
         $.ajax({
-            url : '../data/index.json',
+            url : './data/index.json',
             type : 'get',
             success : function(result){
                 for(var i=0;i<result.length;i++){

@@ -6,7 +6,7 @@ define(['jquery'],function($){
             var goodArr = JSON.parse( localStorage.getItem('goods') )
 
             $.ajax({
-                url : '../data/details.json',
+                url : './data/details.json',
                 type : 'get',
                 success : function(result){
                     var str = ''
@@ -27,8 +27,8 @@ define(['jquery'],function($){
                                             ${item.title}
                                         </div>
                                         <div class="attribute">
-                                            <div class="size">尺寸：${item.size}</div>
-                                            <div class="color">颜色规格：${item.color}</div>
+                                            <div class="size">尺寸：${item.size[0]}</div>
+                                            <div class="color">颜色规格：${item.color[0]}</div>
                                             <div class="size">配送方式：快递配送</div>
                                         </div>
                                         <div class="price">
@@ -59,24 +59,7 @@ define(['jquery'],function($){
                 }
             })
 
-            // 删除
-            $('.product').on('click','.list .delete',function(){
-                var id = $(this).attr('data-del')
-                $.each(goodArr,function(index,item){
-                    if(item.id == id){
-                        goodArr.splice(index,1)
-                        return false
-                    }
-                })
-
-                $(this).parent().remove()
-                localStorage.setItem('goods',JSON.stringify(goodArr))
-                if(goodArr.length==0){
-                    localStorage.removeItem('goods')
-                    var info = '<li>购物车暂无数据</li>'
-                    $('#Shopping .product').html(info)
-                }
-            })
+            
             // 全选
             var num1 = 0
             var sum1 = 0
@@ -112,10 +95,11 @@ define(['jquery'],function($){
             // num1 = parseInt(num1)
             $('.product').on('click','.list .check',function(){
                 
-                var input = $('.list .check')
+                
                 var i = parseInt($(this).siblings('.number').find('input').val())
                 var k = parseInt($(this).siblings('.money').find('i').text())
-                // console.log(k);
+                console.log(i);
+                console.log(k);
 
                 // if($(this)[0].checked == false){
                 //     num1 -=i
@@ -142,7 +126,7 @@ define(['jquery'],function($){
                 // }
                 $('.right .num i').text(num1)
                 $('.right .sum i').text(sum1)
-                
+                var input = $('.list .check')
                 for(var i=0;i<input.length;i++){
                     if(input[i].checked == false){
                         $('.left .ipt').prop('checked',false)
@@ -202,7 +186,7 @@ define(['jquery'],function($){
                     
                     if(item.id == id){
                         item.num--
-                        if(item.num <= 1){
+                        if(item.num < 1){
                             $(_this).siblings('input').val(1)
                             item.num =1
                             $(_this).parent().siblings('.money').find('i').text($(_this).parent().siblings('.price').find('.new').find('i').text())
@@ -228,9 +212,6 @@ define(['jquery'],function($){
                             $('.right .sum i').text(sum1)
                         }
                         
-                        
-                        
-
                     }
                 })
                 localStorage.setItem('goods',JSON.stringify(goodArr))
@@ -304,6 +285,10 @@ define(['jquery'],function($){
                 $.each(input,function(index,item){
                     // console.log(index,item);
                     var id = $(this).eq(index).siblings('.delete').attr('data-del')
+                    var number = parseInt($(this).eq(index).siblings('.number').find('.ipt').val())
+                    var price = parseInt($(this).eq(index).siblings('.price').find('.new').find('i').text()) 
+                    // console.log(number);
+                    // console.log(price); 
                     // console.log(id);
                     var _this = this
                     $.each(goodArr,function(ind,ite){
@@ -311,9 +296,13 @@ define(['jquery'],function($){
                         if(id == ite.id){
                             // console.log('cs');
                             goodArr.splice(ind,1)
+                            num1 -= number
+                            sum1 -= price
                             return false
                         }
                     })
+                    $('.right .num i').text(num1)
+                    $('.right .sum i').text(sum1)
                     $(_this).eq(index).siblings('.delete').parent().remove()
                     localStorage.setItem('goods',JSON.stringify(goodArr))
                     if(goodArr.length==0){
@@ -322,6 +311,48 @@ define(['jquery'],function($){
                         $('#Shopping .product').html(info)
                     }
                 })
+            })
+            // 删除
+            $('.product').on('click','.list .delete',function(){
+                var id = $(this).attr('data-del')
+                
+                
+                
+                var _this = this
+                // return;
+                $.each(goodArr,function(index,item){
+                    if(item.id == id){
+                        var number = parseInt($(_this).siblings('.number').find('.ipt').val())
+                        var price = parseInt($(_this).siblings('.money').find('i').text())
+                        console.log(number);
+                        console.log(price);
+                        if($(_this).siblings('.check').prop('checked') == true){
+                            num1 -= number
+                            sum1 -= price
+                        }
+                        goodArr.splice(index,1)
+                        return false
+                    }
+                })
+                $('.right .num i').text(num1)
+                $('.right .sum i').text(sum1)
+                $(this).parent().remove()
+                // localStorage.setItem('goods',JSON.stringify(goodArr))
+                if(goodArr.length==0){
+                    // localStorage.removeItem('goods')
+                    var info = '<li>购物车暂无数据</li>'
+                    $('#Shopping .product').html(info)
+                }
+                var input = $('.list .check')
+                for(var i=0;i<input.length;i++){
+                    if(input[i].checked == false){
+                        $('.left .ipt').prop('checked',false)
+                        
+                        return
+                    }
+                    $('.left .ipt').prop('checked',true)
+                    // console.log(input[i].checked);
+                }
             })
         }   
 

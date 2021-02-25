@@ -155,11 +155,16 @@
                             color: #333333;padding: 4px 8px;display: block;
                             border: 1px solid #333333;margin-right: 15px;
                             float: left;
+                            &:hover{
+                                color: white;
+                                background: black;
+                            }
                         }
                     }
                     .actived{
-                        border: 1px solid red;
-                        color: red;
+                        // border: 1px solid red;
+                        color: white;
+                        background: black;
                     }
                 }
     
@@ -176,12 +181,18 @@
                         a{
                             color: #333333;padding: 4px 8px;display: block;
                             border: 1px solid #333333;margin-right: 15px;float: left;
+                            &:hover{
+                                color: white;
+                                background: black;
+                            }
                         }
+                        
                     }
                     .actived{
-                        border: 1px solid red;
-                        color: red;
+                        color: white;
+                        background: black;
                     }
+                    
                 }
     
             }

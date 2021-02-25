@@ -2,7 +2,7 @@ define(['jquery'],function($){
     function list(){
 
         $.ajax({
-            url : '../data/list.json',
+            url : './data/list.json',
             type : 'get',
             success : function(result){
                 // console.log(result);
@@ -23,15 +23,15 @@ define(['jquery'],function($){
 
     }
     function header(){
-        $('.header').load('../header.html')
+        $('.header').load('./header.html')
     }
     function footer(){
-        $('.footer').load('../footer.html')
+        $('.footer').load('./footer.html')
     }
     function clickCar(){
         // console.log(123);
         $('.header').on('click','.seach .shopping',function(){
-            location.assign('../shoppingCar.html')
+            location.assign('./shoppingCar.html')
         })
     }
     return {

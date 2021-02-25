@@ -1,6 +1,6 @@
 [
     {
-        "url" : ["../image/shopList/img (1).jpg"],
+        "url" : ["./image/shopList/img (1).jpg"],
         "one_img": [
             "./image/shopList/img%20(1).jpg"
             , "./image/shopList/img%20(269).jpg"
@@ -19,7 +19,7 @@
         "id" : "1"
     },
     {
-        "url" : ["../image/shopList/img (2).jpg"],
+        "url" : ["./image/shopList/img (1).jpg"],
         "one_img": [
             "./image/shopList/img%20(340).jpg"
             , "./image/shopList/img%20(13).jpg"
@@ -38,7 +38,7 @@
         "id" : "2"
     },
     {
-        "url" : ["../image/shopList/img (3).jpg"],
+        "url" : ["./image/shopList/img (3).jpg"],
         "one_img": [
             "./image/shopList/img%20(334).jpg"
             , "./image/shopList/img%20(13).jpg"
@@ -57,7 +57,7 @@
         "id" : "3"
     }
     ,{
-        "url" : ["../image/shopList/img (4).jpg"],
+        "url" : ["./image/shopList/img (4).jpg"],
         "title" : "减轻脖子刺痛感 棱纹编织 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -66,7 +66,7 @@
         "id" : "4"
     },
     {
-        "url" : ["../image/shopList/img (5).jpg"],
+        "url" : ["./image/shopList/img (5).jpg"],
         "title" : "含牦牛绒羊毛 宽罗纹编织 高圆领毛衣",
         "new" : "129",
         "old" : "448",
@@ -75,7 +75,7 @@
         "id" : "5"
     },
     {
-        "url" : ["../image/shopList/img (6).jpg"],
+        "url" : ["./image/shopList/img (6).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -84,7 +84,7 @@
         "id" : "6"
     },
     {
-        "url" : ["../image/shopList/img (7).jpg"],
+        "url" : ["./image/shopList/img (7).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -93,7 +93,7 @@
         "id" : "7"
     },
     {
-        "url" : ["../image/shopList/img (8).jpg"],
+        "url" : ["./image/shopList/img (8).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -102,7 +102,7 @@
         "id" : "8"
     },
     {
-        "url" : ["../image/shopList/img (9).jpg"],
+        "url" : ["./image/shopList/img (9).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -111,7 +111,7 @@
         "id" : "9"
     },
     {
-        "url" : ["../image/shopList/img (10).jpg"],
+        "url" : ["./image/shopList/img (10).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -120,7 +120,7 @@
         "id" : "10"
     },
     {
-        "url" : ["../image/shopList/img (11).jpg"],
+        "url" : ["./image/shopList/img (11).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -129,7 +129,7 @@
         "id" : "11"
     },
     {
-        "url" : ["../image/shopList/img (12).jpg"],
+        "url" : ["./image/shopList/img (12).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -138,7 +138,7 @@
         "id" : "12"
     },
     {
-        "url" : ["../image/shopList/img (13).jpg"],
+        "url" : ["./image/shopList/img (13).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -147,7 +147,7 @@
         "id" : "13"
     },
     {
-        "url" : ["../image/shopList/img (14).jpg"],
+        "url" : ["./image/shopList/img (14).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
@@ -156,7 +156,7 @@
         "id" : "14"
     },
     {
-        "url" : ["../image/shopList/img (15).jpg"],
+        "url" : ["./image/shopList/img (15).jpg"],
         "title" : "减轻颈部刺痛感 阿兰图案 高领毛衣",
         "new" : "129",
         "old" : "448",
